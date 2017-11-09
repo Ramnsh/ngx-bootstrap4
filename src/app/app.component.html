@@ -1,13 +1,37 @@
-<div class="btn-group" dropdown>
-  <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
-    Button dropdown <span class="caret"></span>
-  </button>
-  <ul *dropdownMenu class="dropdown-menu" role="menu">
-    <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-    <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-    <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
-    <li class="divider dropdown-divider"></li>
-    <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
-    </li>
-  </ul>
-</div>
+<carousel>
+    <slide style="background-color:#ebeae8">
+        <!-- <img src="assets/images/nature-1.jpg" style="display: block; width: 100%;"> -->
+              <div class="container">
+                  <div class="row" style="padding-top:25%">
+                      <div class=col-3></div>
+                      <div class="col-9">
+                        <label>Date Picker</label>
+                      </div>
+                  </div>
+                  <div class="row" style="padding-bottom:35%">
+                      <div class="col-md-3"></div>
+                      <div class="col-xs-12 col-12 col-md-4 form-group">
+                        <input type="text" 
+                              class="form-control"
+                              [minDate]="minDate"
+                              [maxDate]="maxDate"
+                              #dp="bsDatepicker"
+                              bsDatepicker [(bsValue)]="bsValue" (bsValueChange)="GetDate($event)">
+                      </div>
+                      <div class="col-xs-12 col-12 col-md-3 form-group">
+                        <button class="btn btn-success" (click)="dp.toggle()"
+                          popover="Travel Date">Date Picker</button>
+                      </div>
+                  </div>
+              </div>
+    
+      </slide>
+     
+  <slide>
+    <img src="assets/images/nature-2.jpg" style="display: block; width: 100%;">
+  </slide>
+  <slide>
+    <img src="assets/images/nature-3.jpg" style="display: block; width: 100%;">
+  </slide>
+  
+</carousel>

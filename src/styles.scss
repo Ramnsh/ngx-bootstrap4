@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+label {
+    color: #B4886B;
+    font-weight: bold;
+    display: block;
+    width: 150px;
+    float: left;
+    font-size: 1.5em;
+    }
+    label:after { content: ": " }
