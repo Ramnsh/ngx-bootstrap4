@@ -4,18 +4,9 @@ import {CarouselConfig} from 'ngx-bootstrap/carousel';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  providers: [
-    { provide: CarouselConfig, useValue: { interval: false } }
-  ]
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
-  minDate = new Date(2017, 5, 10);
-  maxDate = new Date(2018, 9, 15);
-  bsValue: Date = new Date();
+  title = 'Angular 5 HTTPClient Example';
 
-  GetDate(event: any) {
-    console.log(this.bsValue);
-  }
 }
