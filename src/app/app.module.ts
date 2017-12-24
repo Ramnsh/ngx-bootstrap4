@@ -49,4 +49,4 @@ import { AppComponent } from './app.component';
   providers: [ EmployeeService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {  }
