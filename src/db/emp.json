@@ -1,0 +1,16 @@
+ {
+ "emp": [    
+ {
+ "empId": 1, 
+ "empName": "Ramneek Sharma", 
+ "project": "DRE",
+ "technology": "Angular5"
+},
+ {
+ "empId": 2, 
+ "empName": "Javith", 
+ "project": "DRE",
+ "technology": "Full Stack"
+}
+ ]
+}
