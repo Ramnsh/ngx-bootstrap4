@@ -2,9 +2,26 @@
      <p-panel header="Employee Details" styleClass="my-panel">
         <p-dataTable [value]="empDtl" selectionMode="single" >
             <p-column field="empId" header="Employee Id"></p-column>
-            <p-column field="empName" header="Employee Name"></p-column>
+            <p-column field="empName" header="Employee Name">
+                <ng-template let-row="rowData" pTemplate type="body">
+                    <a style="color:blue;text-decoration:underline" (click)="OpenModal(template)">{{row.empName}}</a>
+                </ng-template>
+            </p-column>
             <p-column field="project" header="Project"></p-column>
             <p-column field="technology" header="Technology"></p-column>
         </p-dataTable>
     </p-panel>
 </div>
+
+<ng-template #template>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">Modal</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      This is a modal.
+    </div>
+  </ng-template>
+
