@@ -1,5 +1,6 @@
-import {Component, Input} from '@angular/core';
-import {Employee, EMP} from './employee';
+import {Component, Input, TemplateRef } from '@angular/core';
+import {Employee} from './employee';
+import {BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
 
 
 
@@ -12,8 +13,14 @@ import {Employee, EMP} from './employee';
 // tslint:disable-next-line:component-class-suffix
 export class EmployeeDetail {
 
-    constructor () {}
-    @Input()
+  @Input()
     empDtl: Employee[];
+    modalRef: BsModalRef;
+    constructor (private _modalService: BsModalService) {}
+
+    OpenModal(template: TemplateRef<any>) {
+        this.modalRef = this._modalService.show(template);
+    }
+
 }
 

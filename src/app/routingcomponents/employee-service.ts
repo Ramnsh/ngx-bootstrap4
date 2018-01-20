@@ -1,14 +1,15 @@
  import { Injectable } from '@angular/core';
- import { Employee, EMP } from './employee';
+ import { Employee } from './employee';
+import { HttpClient } from '@angular/common/http';
 
  @Injectable()
  export class EmployeeService {
     empData: Employee;
-    emp = EMP;
+    // emp = EMP;
 
-    constructor() {}
-    GetEmpData(): Employee[] {
-        this.emp = this.emp.map(emp => emp);
-        return this.emp;
+    constructor(private _http: HttpClient) {}
+
+    GetEmpData() {
+        return this._http.get('http://localhost:3000/emp');
     }
  }
